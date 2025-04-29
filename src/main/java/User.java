@@ -1,17 +1,29 @@
 
-import java.util.Random;
 
-public class User {
+// Класс игрока
+class User {
+    private int tries;
+    private int bestTries = Integer.MAX_VALUE;
 
+    public void incrementTries() {
+        tries++;
+    }
 
-    public static int user() {
+    public void resetTries() {
+        tries = 0;
+    }
 
-        Random random = new Random();
-        int min = 1;
-        int max = 100;
+    public void updateBestTries() {
+        if (tries < bestTries) {
+            bestTries = tries;
+        }
+    }
 
+    public int getTries() {
+        return tries;
+    }
 
-        return random.nextInt(max) + min;
-
+    public int getBestTries() {
+        return bestTries;
     }
 }

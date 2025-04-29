@@ -1,14 +1,18 @@
-import java.util.Random;
 
-public class Virus {
-    public static int virus() {
 
-        Random random = new Random();
-        int min = 1;
-        int max = 100;
+// Класс вируса с загаданным числом
+class Virus {
+    private int secretNumber;
 
-        return  random.nextInt(max) + min;
+    public Virus() {
+        generateNewNumber();
     }
 
+    public void generateNewNumber() {
+        this.secretNumber = (int) (Math.random() * 100) + 1; // от 1 до 100 включительно
+    }
 
+    public int getSecretNumber() {
+        return secretNumber;
+    }
 }
