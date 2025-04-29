@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class PersonalComputer {
+public class Virus {
     public static int virus() {
 
         Random random = new Random();
